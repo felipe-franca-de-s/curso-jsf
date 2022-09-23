@@ -12,8 +12,12 @@
 <h:body>
 	<div>
 		<h:form>
-			<h:inputText value="#{ajaxHelloBean.name}"></h:inputText>
-			<h:commandButton value="Welcome " action="resultAjaxHello"></h:commandButton>
+			<h:inputText id="name" value="#{ajaxHelloBean.name}"></h:inputText>
+			<h:commandButton value="Welcome ">
+				<f:ajax execute="name" render="output"/>
+			</h:commandButton>
+
+			<h2><h:outputText id="output" value="#{ajaxHelloBean.sayWelcome}"/></h2>
 		</h:form>
 	</div>
 </h:body>

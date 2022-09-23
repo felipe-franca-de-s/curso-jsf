@@ -7,10 +7,10 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class AjaxHelloBean implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
-	
+public class AjaxHelloBean implements Serializable {
+
+//	private static final long serialVersionUID = 1L;
+
 	private String name = "Ajax ";
 
 	public String getName() {
@@ -21,10 +21,16 @@ public class AjaxHelloBean implements Serializable{
 		this.name = name;
 	}
 
-	public static long getSerialversionid() {
-		return serialVersionUID;
+	/*
+	 * public static long getSerialversionid() { return serialVersionUID; }
+	 */
+
+	public String getSayWelcome() {
+		if("".equals(name) || name == null) {
+			return "";
+		} else {			
+			return "Mensagem Ajax " + name;
+		}
 	}
-	
-	
-	
+
 }
