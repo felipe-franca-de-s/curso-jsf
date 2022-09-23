@@ -7,11 +7,11 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class HelloBean implements Serializable{
+public class AjaxHelloBean implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private String name = "Sr(a): ";
+	private String name = "Ajax ";
 
 	public String getName() {
 		return name;
