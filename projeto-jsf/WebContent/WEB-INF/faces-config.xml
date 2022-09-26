@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<faces-config
-    xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
-    version="2.1">
-    
-    <managed-bean>
-    	<managed-bean-name>sessionHelloBean</managed-bean-name>
-    	<managed-bean-class>br.com.sms.SessionHelloBean</managed-bean-class>
-    	<managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+
+	<!-- <managed-bean> <managed-bean-name>sessionHelloBean</managed-bean-name> 
+		<managed-bean-class>br.com.sms.SessionHelloBean</managed-bean-class> <managed-bean-scope>session</managed-bean-scope> 
+		</managed-bean> -->
+
+	<navigation-rule>
+		<from-view-id>page1.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>page2</from-outcome>
+			<to-view-id>page2.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>page2.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>page1</from-outcome>
+			<to-view-id>page1.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 
 </faces-config>
