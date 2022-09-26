@@ -6,7 +6,7 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
-	<title>Index JSF</title>
+	<title>Process Page 1</title>
 	<h:outputStylesheet name="css/style.css" />
 	<h:outputScript name="script/script.js"></h:outputScript>
 </h:head>
@@ -27,8 +27,12 @@
 		<main>
 		<div id="content">
 			<div class="innertube">
-				<h1>CONTEUDO</h1>
-				<h2>Mais Compras</h2>
+				<h1>Process Page 1</h1>
+				
+				<h:form>
+					<h:commandButton action="#{processBean.processPage1}" value="Página 1"/>
+					<h:commandButton action="#{processBean.processPage2}" value="Página 2"/>
+				</h:form>
 			</div>
 		</div>
 		</main>

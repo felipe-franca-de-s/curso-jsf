@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16637035668900" configfile="/projeto-jsf/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="page1.xhtml" id="pf16641930676466" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf16641930676467" inlinks="pf16641931089409" path="page1.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" id="pf16641930676468" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16641931089409" inlinks="pf16641930676467" path="page2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page1.xhtml" x="338" y="178" id="pf16641930676466" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf16641930676467" inlinks="pf16641931089409" path="page1.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" x="122" y="178" id="pf16641930676468" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16641931089409" inlinks="pf16641930676467" path="page2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="start.xhtml" x="122" y="946" id="pf166419717577210" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf166419717577211 pf166419868130714 pf166419868130715" path="start.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="orderMore.xhtml" x="338" y="562" id="pf166419717577213" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf166419717577211" path="/orderMore.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="payment.xhtml" x="338" y="946" id="pf166419868130716" referenceLink="//@navigationRule.2/@navigationCase.1/@toViewId|" inlinks="pf166419868130714" path="/payment.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register.xhtml" x="338" y="1330" id="pf166419868130717" referenceLink="//@navigationRule.2/@navigationCase.2/@toViewId|" inlinks="pf166419868130715" path="register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="processPage1.xhtml" x="338" y="1714" id="pf166419885188418" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" outlinks="pf166419885188419" inlinks="pf166419885188420" path="processPage1.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="processPage2.xhtml" x="122" y="1714" id="pf166419885188421" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf166419885188420" inlinks="pf166419885188419" path="processPage2.xhtml"/>
   <links id="pf16641930676467" target="pf16641930676468" source="pf16641930676466" outcome="page2"/>
   <links id="pf16641931089409" target="pf16641930676466" source="pf16641930676468" outcome="page1"/>
+  <links id="pf166419717577211" target="pf166419717577213" source="pf166419717577210" outcome="payment"/>
+  <links id="pf166419868130714" target="pf166419868130716" source="pf166419717577210" outcome="payment"/>
+  <links id="pf166419868130715" target="pf166419868130717" source="pf166419717577210" outcome="payment"/>
+  <links id="pf166419885188419" target="pf166419885188421" source="pf166419885188418" outcome="Success1"/>
+  <links id="pf166419885188420" target="pf166419885188418" source="pf166419885188421" outcome="Success2"/>
 </pageflow:Pageflow>
